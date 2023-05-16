@@ -1,0 +1,8 @@
+
+url = 'http://localhost:53615'
+rmt_con = remote_connection.RemoteConnection(url)
+rmt_con._commands.update({
+    Command.UPLOAD_FILE: ("POST", "/session/$sessionId/file")
+})
+b = SessionRemote(command_executor=rmt_con,desired_capabilities={})
+b.session_id="d35229966bfd617274fc17ccc1b69011"
